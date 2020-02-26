@@ -1,0 +1,52 @@
+/* component/news/news.wxss */
+
+.news-image {
+  position: relative;
+}
+
+.news {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+  align-items: center;
+}
+
+.news .img {
+  width: 100rpx;
+  height: 100rpx;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.2rem;
+}
+
+.news .img-noborder {
+  border: 1px solid #f0f0f0;
+  width: 200rpx;
+  height: 150rpx;
+  object-fit: cover;
+}
+
+.news .name {
+  display: flex;
+  padding: 5rpx 10rpx 5rpx 20rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #555;	
+  font-weight: bold;
+  text-overflow: ellipsis;
+  word-wrap:break-word; 
+  word-break:break-all;
+  height: 120rpx;
+}
+
+
+.news .price {
+  display: flex;
+  padding: 0rpx 10rpx 10rpx 20rpx;
+  font-size: 20rpx;
+  color: #d44d44;
+  font-weight: 700;
+}
+
+.news-right {
+	display: block;
+}

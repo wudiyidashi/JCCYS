@@ -1,0 +1,8 @@
+<!--component/news/news.wxml-->
+<view class="news">
+  <image class="img-noborder" src="{{data.picUrl}}"></image>
+  <view class="news-right">
+  <text class="name">{{data.title}}</text>
+  <text class="price">{{data.price}}</text>
+  </view>
+</view>

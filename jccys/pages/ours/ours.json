@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "product-hot": "/component/product-hot/product-hot",
+    "product-big": "/component/product-big/product-big",
+    "news":"/component/news/news",
+	  "txv-video": "plugin://tencentvideo/video",
+    "img":"/component/img/img"
+  }
+}

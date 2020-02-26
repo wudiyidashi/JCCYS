@@ -1,0 +1,52 @@
+/* component/img/img.wxss */
+
+.img {
+  position: relative;
+}
+
+.img .img {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 8rpx;
+}
+
+.img .mt {
+  z-index: 2;
+  padding: 10rpx 15rpx 30rpx 15rpx;
+  width: 205rpx;
+}
+
+.img .mt .brand {
+  display: block;
+  font-size: 24rpx;
+  color: #555;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.img .mt .description {
+  display: block;
+  font-size: 20rpx;
+  color: #7f7f7f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 5rpx;
+}
+
+.img .mt .price {
+  display: block;
+  font-size: 24rpx;
+  color: #d44d44;
+  font-weight: 700;
+  margin-top: 5rpx;
+}
+
+.img .tag {
+  font-weight: 700;
+  position: absolute;
+  top: 5rpx;
+  left: 15rpx;
+}
