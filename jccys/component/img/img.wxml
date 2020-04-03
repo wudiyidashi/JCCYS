@@ -1,7 +1,0 @@
-<!--component/img/img.wxml-->
-<view class="img">
-  <image class="img" src="{{data.picUrl}}" mode="aspectFit"></image>
-  <view class="mt">
-    <text class="description">{{data.description}}</text>
-  </view>
-</view>

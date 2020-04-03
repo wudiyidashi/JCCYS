@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "product-hot": "/component/product-hot/product-hot",
-    "product-big": "/component/product-big/product-big",
-	  "van-search": "/lib/vant-weapp/search/index"
-  }
-}
