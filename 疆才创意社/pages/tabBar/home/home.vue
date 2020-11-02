@@ -52,42 +52,25 @@
 			</view>
 		</view>
 		<!-- 广告图 -->
-		<view class="banner"><image src="/static/img/bar.png"></image></view>
+		<view class="banner"><image src="/static/img/千库网原创理财邀请好友赢红包banner.png"></image></view>
 		<!-- 活动区 -->
 		<view class="promotion">
 			<view class="text">优惠专区</view>
 			<view class="list">
 				<view
-					class="column"
-					v-for="(row, index) in Promotion"
-					@tap="toPromotion(row)"
+					class="banner-tow"
+					v-for="(row, index) in banner"
 					:key="index"
+					@tap="toCategory(row)"
 				>
-					<view class="top">
-						<view class="title">{{ row.title }}</view>
-						<view class="countdown" v-if="row.countdown">
-							<view>{{ row.countdown.h }}</view>
-							:
-							<view>{{ row.countdown.m }}</view>
-							:
-							<view>{{ row.countdown.s }}</view>
-						</view>
-					</view>
-					<view class="left">
-						<view class="ad">{{ row.ad }}</view>
-						<view class="into">点击进入</view>
-					</view>
-					<view class="right"><image :src="row.img"></image></view>
+					<view class="img"><image :src="row.img"></image></view>
+					<view class="text">{{ row.name }}</view>
 				</view>
 			</view>
 		</view>
 		<!-- 商品列表 -->
 		<view class="goods-list">
-			<view class="title">
-				<image src="/static/img/hua.png"></image>
-				猜你喜欢
-				<image src="/static/img/hua.png"></image>
-			</view>
+			<view class="text">品质甄选</view>
 			<view class="product-list">
 				<view
 					class="product"
@@ -124,90 +107,66 @@ export default {
 			currentSwiper: 0,
 			// 轮播图片
 			swiperList: [
-				{ id: 1, src: 'url1', img: '/static/img/1.jpg' },
-				{ id: 2, src: 'url2', img: '/static/img/2.jpg' },
-				{ id: 3, src: 'url3', img: '/static/img/3.jpg' }
+				{ id: 1, src: 'url1', img: '/static/img/a4d8t-wxu3c.jpg' },
+				{ id: 2, src: 'url2', img: '/static/img/ank32-d39o0.jpg' },
+				{ id: 3, src: 'url3', img: '/static/img/aok7a-pva62.jpg' }
 			],
 			// 分类菜单
 			categoryList: [
-				{ id: 1, name: '手机', img: '/static/img/category/手机.png' },
-				{ id: 2, name: '电脑', img: '/static/img/category/笔记本.png' },
-				{ id: 3, name: '配件', img: '/static/img/category/耳机.png' },
-				{ id: 4, name: '组装机', img: '/static/img/category/组装机.png' }
+				{ id: 1, name: '电脑', img: '/static/img/category/11.png' },
+				{ id: 2, name: '手机', img: '/static/img/category/22.png' },
+				{ id: 3, name: '配件', img: '/static/img/category/33.png' },
+				{ id: 4, name: '本地服务', img: '/static/img/category/44.png' }
 			],
 			Promotion: [],
+			// 优惠专区
+			banner: [
+				{ id: 1, src: 'url1', img: '/static/img/banner1.png' },
+				{ id: 2, src: 'url1', img: '/static/img/banner2.png' }
+			],
 			//猜你喜欢列表
 			productList: [
 				{
 					goods_id: 0,
 					img: '/static/img/goods/p1.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
+					name: '手机',
 					price: '￥168',
 					slogan: '1235人付款'
 				},
 				{
 					goods_id: 1,
 					img: '/static/img/goods/p2.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
+					name: '手机',
 					price: '￥168',
 					slogan: '1235人付款'
 				},
 				{
-					goods_id: 2,
-					img: '/static/img/goods/p3.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
+					goods_id: 0,
+					img: '/static/img/goods/p1.jpg',
+					name: '手机',
 					price: '￥168',
 					slogan: '1235人付款'
 				},
 				{
-					goods_id: 3,
-					img: '/static/img/goods/p4.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
+					goods_id: 1,
+					img: '/static/img/goods/p2.jpg',
+					name: '手机',
+					price: '￥168',
+					slogan: '1235人付款'
+				},{
+					goods_id: 0,
+					img: '/static/img/goods/p1.jpg',
+					name: '手机',
 					price: '￥168',
 					slogan: '1235人付款'
 				},
 				{
-					goods_id: 4,
-					img: '/static/img/goods/p5.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
+					goods_id: 1,
+					img: '/static/img/goods/p2.jpg',
+					name: '手机',
 					price: '￥168',
 					slogan: '1235人付款'
 				},
-				{
-					goods_id: 5,
-					img: '/static/img/goods/p6.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
-					price: '￥168',
-					slogan: '1235人付款'
-				},
-				{
-					goods_id: 6,
-					img: '/static/img/goods/p7.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
-					price: '￥168',
-					slogan: '1235人付款'
-				},
-				{
-					goods_id: 7,
-					img: '/static/img/goods/p8.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
-					price: '￥168',
-					slogan: '1235人付款'
-				},
-				{
-					goods_id: 8,
-					img: '/static/img/goods/p9.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
-					price: '￥168',
-					slogan: '1235人付款'
-				},
-				{
-					goods_id: 9,
-					img: '/static/img/goods/p10.jpg',
-					name: '商品名称商品名称商品名称商品名称商品名称',
-					price: '￥168',
-					slogan: '1235人付款'
-				}
 			],
 			loadingText: '正在加载...'
 		};
@@ -240,7 +199,7 @@ export default {
 				goods_id: goods_id,
 				img:
 					'/static/img/goods/p' + (goods_id % 10 == 0 ? 10 : goods_id % 10) + '.jpg',
-				name: '商品名称商品名称商品名称商品名称商品名称',
+				name: '选择',
 				price: '￥168',
 				slogan: '1235人付款'
 			};
@@ -505,7 +464,7 @@ page{position: relative;background-color: #fff;}
 	justify-content: center;
 	.swiper-box {
 		width: 92%;
-		height: 30.7vw;
+		height: 42vw;
 
 		overflow: hidden;
 		border-radius: 15upx;
@@ -515,11 +474,11 @@ page{position: relative;background-color: #fff;}
 		z-index: 1;
 		swiper {
 			width: 100%;
-			height: 30.7vw;
+			height: 42vw;
 			swiper-item {
 				image {
 					width: 100%;
-					height: 30.7vw;
+					height: 42vw;
 				}
 			}
 		}
@@ -565,10 +524,6 @@ page{position: relative;background-color: #fff;}
 			image {
 				width: 100rpx;
 				height: 100rpx;
-				border-radius: 30upx;
-				border-style: solid ;
-				border-width: 8upx;
-				border-color: #f3f3f3;
 			}
 		}
 		.text {
@@ -576,24 +531,27 @@ page{position: relative;background-color: #fff;}
 			width: 100%;
 			display: flex;
 			justify-content: center;
-			font-size: 24upx;
+			font-size: 26rpx;
+			font-weight: 600;
 			color: #3c3c3c;
 		}
 	}
 }
 .banner {
-	width: 92%;
-	height: 120rpx;
-	margin: 40upx;
+	width: 96%;
+	height: 200rpx;
+	margin: 1rpx;
+	position:relative;
+	left: 25rpx;
 	image {
-		width: 100%;
-		height: 330upx;
-		position: relative;
-		top: -200rpx;
+			width: 96%;
+			height: 180rpx;
+			
+
 	}
 }
 .promotion {
-	width: 92%;
+	width: 93%;
 	margin: 0 4%;
 	.text {
 		width: 100%;
@@ -606,6 +564,14 @@ page{position: relative;background-color: #fff;}
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		.banner-tow{
+			width: 100%;
+			height: 170rpx;
+			image{
+				width: 97%;
+				height: 170rpx;
+			}
+		}
 		.column {
 			width: 43%;
 			padding: 15upx 3%;
@@ -676,20 +642,17 @@ page{position: relative;background-color: #fff;}
 }
 .goods-list {
 	// background-color: #f4f4f4;
-	.title {
+	margin: 0;
+	.text{
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 80upx;
-		color: #f47825;
-		font-size: 30upx;
-		margin-top: 10upx;
-		image {
-			width: 30upx;
-			height: 30upx;
+		height: 90upx;
+		font-size: 34upx;
+		font-weight: 600;
+		margin-top: -10upx;
+		position: relative;
+		  left: 30rpx;
+		  top: 30rpx;
 		}
-	}
 	.loading-text {
 		width: 100%;
 		display: flex;

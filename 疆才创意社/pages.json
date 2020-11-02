@@ -257,7 +257,16 @@
         }
         ,{
             "path" : "pages/tabBar/aboutus/aboutus",
-            "style" : {}
+            "style" : {
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle":"light",
+				"navigationBarBackgroundColor":"#00aaff",
+				"backgroundColorTop":"#00aaff",
+				"navigationBarTextStyle":"white",
+				"app-plus": {
+					"titleNView": false //禁用原生导航栏
+				}
+			}
         }
         ,{
             "path" : "pages/goods/search/search",
